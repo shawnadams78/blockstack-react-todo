@@ -1,0 +1,23 @@
+.landing {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+@media (min-width: 992px) {
+  .landing {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing {
+    max-width: 700px;
+  }
+}
+
+.landing__screenshot-image {
+  border: 1px solid #fff;
+  box-shadow: 0 0 30px #fff;
+  max-height: 100%;
+  max-width: 100%;
+}

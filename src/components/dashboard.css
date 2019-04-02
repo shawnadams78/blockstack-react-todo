@@ -1,0 +1,104 @@
+.dashboard {
+  border-radius: 0.5em;
+}
+
+fieldset {
+  background-color: rgba(255,255,255,0.75);
+  border: 0;
+  margin-bottom: 2em;
+  padding: 0;
+  position: relative;
+}
+
+.dashboard__input {
+  background-color: transparent;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', 'Roboto Condensed', Helvetica, sans-serif;
+  font-size: 2em;
+  outline: 0;
+  padding: 0.25em 4em 0.25em 0.5em;
+  width: 100%;
+}
+
+.dashboard__input::placeholder {
+  color: #f1b2b4;
+}
+
+.dashboard__input-button {
+  background-color: transparent;
+  border: 3px solid #2e2633;
+  font-family: 'Merriweather', 'Roboto Condensed', Helvetica, sans-serif;
+  font-size: 1.25em;
+  outline: 0;
+  padding: 0.4em 1em;
+  position: absolute;
+  right: 0.25em;
+  text-transform: uppercase;
+  top: 0.25em;
+}
+
+.dashboard__input-button:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.dashboard__list {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard__list-item {
+  background-color: rgba(64,71,115,0.85); /* #404773 */
+  border-radius: 0.20em;
+  color: #fff;
+  display: flex;
+  font-size: 1.5em;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
+.dashboard__list-item:nth-child(2) {
+  background-color: rgba(83,85,135,0.85); /* #535987 */
+}
+
+.dashboard__list-item:nth-child(3) {
+  background-color: rgba(110,118,164,0.85); /* #6e76a4 */
+}
+
+.dashboard__list-item:nth-child(4) {
+  background-color: rgba(148,139,187,0.75); /* #948bbb */
+}
+
+.dashboard__list-item:nth-child(n + 5) {
+  background-color: rgba(195,158,196,0.75); /* #c39ec4 */
+}
+
+.dashboard__label {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+}
+
+.dashboard__checkbox {
+  margin-right: 1em;
+}
+
+.dashboard__todo-text--completed {
+  opacity: 0.50;
+  text-decoration: line-through;
+}
+
+.dashboard__delete-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.75em;
+}
+
+.dashboard__delete-button:hover {
+  background-color: rgba(255,255,255,0.25);
+  cursor: pointer;
+}

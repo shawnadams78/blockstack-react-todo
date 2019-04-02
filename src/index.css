@@ -1,5 +1,63 @@
 body {
+  background-color: #362b3b;
+  background-image: url(mountains.gif);
+  background-position: center 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Merriweather', 'Roboto Condensed', Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+
+.app {
+  position: relative;
+}
+
+.header {
+  padding: 2em;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding-top: 6em;
+  }
+}
+
+.header__title {
+  color: #fff;
+  font-size: 7em;
+  line-height: 1;
+  margin: 0 0 0.15em 0;
+  text-shadow: 0 1px 1px #fdc3c7;
+  text-transform: uppercase;
+}
+
+.header__small-title {
+  color: #2e2633;
+  font-size: 1.75em;
+  margin: 0;
+}
+
+.app__button {
+  background-color: transparent;
+  border: 2px solid #2e2633;
+  color: #2e2633;
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+}
+
+.app__button:hover {
+  background-color: rgba(255,255,255,0.25);
+  cursor: pointer;
+}
+
+.user {
+  align-items: center;
+  color: #2e2633;
+  display: flex;
+  position: absolute;
+  right: 2em;
+  top: 2em;
 }

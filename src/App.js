@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './App.css';
-
-import UserInfo from './UserInfo';
+import Dashboard from './components/Dashboard'
+import Landing from './components/Landing'
+import UserInfo from './components/UserInfo';
 
 const blockstack = require('blockstack');
 
@@ -43,10 +43,16 @@ class App extends Component {
       this.setState({ person })
     })
   }
+  //
+  // handleSignIn(event) {
+  //   event.preventDefault();
+  //   blockstack.redirectToSignIn()
+  // }
 
-  handleSignIn(event) {
-    event.preventDefault();
-    blockstack.redirectToSignIn()
+  handleSignIn(e) {
+    e.preventDefault();
+    const origin = window.location.origin
+    blockstack.redirectToSignIn(origin, origin + '/manifest.json', ['store_write', 'publish_data'])
   }
 
   handleSignOut(event) {
@@ -55,22 +61,38 @@ class App extends Component {
   }
 
   render() {
+    const { isSignedIn } = this.state
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Blockstack Create React App</h1>
+      <div className='app'>
+        <header className="header">
+          <h3 className="header__small-title">Blockstack+React</h3>
+          <h1 className="header__title">Todo</h1>
         </header>
-        <p style={{display: this.state.isSignedIn ? 'none' : 'block' }}>
-          <button onClick={this.handleSignIn}>
-            Sign-in with Blockstack
-          </button>
-        </p>
-        <p style={{display: !this.state.isSignedIn ? 'none' : 'block' }}>
-          <UserInfo user={this.state.person} />
-          <button onClick={this.handleSignOut}>
-            Sign-out
-          </button>
-        </p>
+
+        {!isSignedIn &&
+        <div>
+          <div className='user'>
+            <UserInfo>Welcome!</UserInfo>
+            <button className='app__button' onClick={this.handleSignIn}>
+              Sign In with Blockstack
+            </button>
+          </div>
+          <Landing/>
+        </div>
+        }
+
+        {isSignedIn &&
+        <div>
+          <div className='user'>
+            <UserInfo user={this.state.person} />
+            <button className='app__button' onClick={this.handleSignOut}>
+              Sign Out
+            </button>
+          </div>
+          <Dashboard>Dashboard</Dashboard>
+        </div>
+        }
       </div>
     )
   }
