@@ -7,6 +7,12 @@ A Blockstack Todo app built with React. Intended to have feature parity with the
 * Toggle "complete" status
 * Delete completed todos
 
+### Issues/TODO/Incomplete
+
+* I ran into build issues trying to integrate both `styled-components` and `node-sass`, so in the interest of time I used vanilla CSS.
+* There is some rudimentary responsiveness built into the layout, but additional work would be useful
+* App icons/favicons
+
 ---
 
 ## Installation
