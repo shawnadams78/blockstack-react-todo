@@ -1,6 +1,6 @@
 # Blockstack React Todo
 
-A Blockstacf Todo app built with React. Intended to have feature parity with the Blockstack documentation example Todo app built with the Vue framework:
+A Blockstack Todo app built with React. Intended to have feature parity with the Blockstack documentation example Todo app built with the Vue framework (https://docs.blockstack.org/browser/todo-list.html):
 
 * Blockstack user authentication
 * Gaia storage of todos
